@@ -40,7 +40,7 @@ function openGame(title) {
     let clicks = 0;
     modalBody.innerHTML = `
         <h2>${title} Challenge</h2>
-        <p>¡Haz clic en el mando para ganar!</p>
+        <p>Click the ganepad to win!</p>
         <div style="font-size: 3rem; margin: 20px;" id="counter">0</div>
         <button id="btn-play" style="font-size: 50px; background:none; border:none; cursor:pointer;">🎮</button>
     `;
