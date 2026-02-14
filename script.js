@@ -2,7 +2,9 @@ const games = [
     { title: "Elden Ring", platform: "PC", img: "/images/elden-ring.jpg" },
     { title: "God of War", platform: "PS5", img: "/images/god-of-war.jpg" },
     { title: "Zelda: TotK", platform: "Switch", img: "/images/zelda.jpg" },
-    { title: "Spider-Man 2", platform: "PS5", img: "/images/spiderman2.jpg" }
+    { title: "Spider-Man 2", platform: "PS5", img: "/images/spiderman2.jpg" },
+    { title: "Mario Odyssey", platform: "Switch", img: "/images/mario.jpg" },
+    { title: "Cyberpunk 2077", platform: "PC", img: "/images/cyberpunk.jpg" },
 ];
 
 const gameGrid = document.getElementById('game-grid');
