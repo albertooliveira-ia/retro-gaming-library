@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Gaming Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-gamepad"></i>
+                <h2>GameHub</h2>
+            </div>
+            <nav class="filters">
+                <p>Filter by Platform:</p>
+                <button class="filter-btn active" data-filter="all">All Games</button>
+                <button class="filter-btn" data-filter="PC">PC Masters</button>
+                <button class="filter-btn" data-filter="PS5">PlayStation 5</button>
+                <button class="filter-btn" data-filter="Switch">Nintendo Switch</button>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header>
+                <h1>My Collection</h1>
+                <p>Click a game to play a mini-challenge!</p>
+            </header>
+            <section class="game-grid" id="game-grid"></section>
+        </main>
+    </div>
+
+    <div id="game-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

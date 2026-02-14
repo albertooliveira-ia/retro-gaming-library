@@ -1,0 +1,57 @@
+:root {
+    --bg-dark: #0f172a;
+    --sidebar-dark: #020617;
+    --card-bg: #1e293b;
+    --accent-blue: #38bdf8;
+    --text-main: #f8fafc;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    margin: 0;
+    display: flex;
+}
+
+.container { display: flex; width: 100%; min-height: 100vh; }
+
+/* Sidebar */
+.sidebar { width: 250px; background: var(--sidebar-dark); padding: 30px; border-right: 1px solid #334155; }
+.logo { display: flex; align-items: center; gap: 10px; color: var(--accent-blue); margin-bottom: 30px; }
+
+.filter-btn {
+    display: block; width: 100%; padding: 12px; margin-bottom: 8px;
+    background: transparent; color: #94a3b8; border: 1px solid #334155;
+    border-radius: 8px; cursor: pointer; text-align: left; transition: 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover { background: var(--accent-blue); color: var(--bg-dark); font-weight: bold; }
+
+/* Grid */
+.content { flex: 1; padding: 40px; }
+.game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+
+.game-card {
+    background: var(--card-bg); border-radius: 12px; overflow: hidden;
+    border: 1px solid #334155; cursor: pointer; transition: 0.3s;
+}
+
+.game-card:hover { transform: translateY(-5px); border-color: var(--accent-blue); }
+.game-img { width: 100%; height: 140px; object-fit: cover; }
+.game-info { padding: 15px; }
+
+/* --- ESTILOS DEL MODAL --- */
+.modal-overlay {
+    display: none; /* OCULTO POR DEFECTO */
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px); z-index: 9999;
+}
+
+.modal-content {
+    background: var(--card-bg); margin: 10% auto; padding: 30px;
+    width: 90%; max-width: 500px; border-radius: 20px;
+    border: 2px solid var(--accent-blue); position: relative; text-align: center;
+}
+
+.close-btn { position: absolute; right: 20px; top: 10px; font-size: 30px; cursor: pointer; color: var(--accent-blue); }
